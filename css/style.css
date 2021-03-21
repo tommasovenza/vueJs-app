@@ -204,3 +204,13 @@ input[type="text"]::-webkit-input-placeholder {
     font-size: 10px;
     color: #757575;
 }
+.message .fa-chevron-down {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.active {
+    display: flex!important;
+}
