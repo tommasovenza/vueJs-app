@@ -158,6 +158,7 @@ input[type="text"]::-webkit-input-placeholder {
     background-image: url('../img/wallpaper.jpg');
     width: 100%;
     height: calc(100% - 140px);
+    overflow-y: scroll;
 }
 .input-text {
     height: 70px;
@@ -179,4 +180,27 @@ input[type="text"]::-webkit-input-placeholder {
     border: 0;
     border-radius: 30px;
     padding-left: 20px;
+}
+.message {
+    padding: 15px 80px 15px 10px;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 10px 15px;
+    clear: both;
+    position: relative;
+}
+.sent {
+    background-color: lightgreen;
+    float: right;
+}
+.received {
+    background-color: #fff;
+    float: left;
+}
+.message span {
+    position: absolute;
+    bottom: 3px;
+    right: 8px;
+    font-size: 10px;
+    color: #757575;
 }

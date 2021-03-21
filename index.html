@@ -23,7 +23,7 @@
             <!-- app col left -->
             <div class="main-left">
                 <div class="col-heading">
-                    <img src="img/avatar_1.jpg" alt="avatar">
+                    <img src="img/fra_avatar.png" alt="avatar">
                     <ul>
                         <li><a href="#"><i class="fas fa-redo-alt"></i></a></li>
                         <li><a href="#"><i class="fas fa-comment-alt"></i></a></li>
@@ -44,107 +44,101 @@
 
                 <div class="contacts-list">
                     <div class="contacts-item">
-                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <img src="img/tommi_pic.jpeg" alt="profile picture">
                         <div class="contacts-text">
-                            <h3>Michele</h3>    
+                            <h3>Tommaso</h3>    
                             <span>Non poteva essere altrimenti</span>
                         </div>
                         <span>17.53</span>
                     </div>
                     
                     <div class="contacts-item">
-                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <img src="img/brid_pic.jpeg" alt="profile picture">
                         <div class="contacts-text">
-                            <h3>Michele</h3>    
+                            <h3>Bridgette</h3>    
                             <span>Non poteva essere altrimenti</span>
                         </div>
                         <span>17.53</span>
                     </div>
                     <div class="contacts-item">
-                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <img src="img/fra_pic.jpeg" alt="profile picture">
                         <div class="contacts-text">
-                            <h3>Michele</h3>    
+                            <h3>Franscesco</h3>    
                             <span>Non poteva essere altrimenti</span>
                         </div>
                         <span>17.53</span>
                     </div>
                     <div class="contacts-item">
-                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <img src="img/vitt_pic.jpeg" alt="profile picture">
                         <div class="contacts-text">
-                            <h3>Michele</h3>    
+                            <h3>Vittoria</h3>    
                             <span>Non poteva essere altrimenti</span>
                         </div>
                         <span>17.53</span>
                     </div>
 
                     <div class="contacts-item">
-                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <img src="img/gra_pic.jpeg" alt="profile picture">
                         <div class="contacts-text">
-                            <h3>Michele</h3>    
+                            <h3>Grazia</h3>    
                             <span>Non poteva essere altrimenti</span>
                         </div>
                         <span>17.53</span>
                     </div>
                     
                     <div class="contacts-item">
-                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <img src="img/ste_pic.jpeg" alt="profile picture">
                         <div class="contacts-text">
-                            <h3>Michele</h3>    
+                            <h3>Stefano</h3>    
                             <span>Non poteva essere altrimenti</span>
                         </div>
                         <span>17.53</span>
                     </div>
 
                     <div class="contacts-item">
-                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <img src="img/gio_pic.jpeg" alt="profile picture">
                         <div class="contacts-text">
-                            <h3>Michele</h3>    
+                            <h3>Giovanni</h3>    
                             <span>Non poteva essere altrimenti</span>
                         </div>
                         <span>17.53</span>
                     </div>
 
                     <div class="contacts-item">
-                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <img src="img/giu_pic.jpeg" alt="profile picture">
                         <div class="contacts-text">
-                            <h3>Michele</h3>    
+                            <h3>Giulia</h3>    
                             <span>Non poteva essere altrimenti</span>
                         </div>
                         <span>17.53</span>
                     </div>
 
                     <div class="contacts-item">
-                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <img src="img/emma_pic.jpeg" alt="profile picture">
                         <div class="contacts-text">
-                            <h3>Michele</h3>    
+                            <h3>Emmanuele</h3>    
                             <span>Non poteva essere altrimenti</span>
                         </div>
                         <span>17.53</span>
                     </div>
 
                     <div class="contacts-item">
-                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <img src="img/luca_pic.jpeg" alt="profile picture">
                         <div class="contacts-text">
-                            <h3>Michele</h3>    
+                            <h3>Luca</h3>    
                             <span>Non poteva essere altrimenti</span>
                         </div>
                         <span>17.53</span>
                     </div>
 
-                    <div class="contacts-item">
-                        <img src="img/avatar_3.jpg" alt="profile picture">
-                        <div class="contacts-text">
-                            <h3>Michele</h3>    
-                            <span>Non poteva essere altrimenti</span>
-                        </div>
-                        <span>17.53</span>
-                    </div>
+                   
                 </div>
             </div>
+
             <!-- app col right -->
             <div class="main-right">
                 <div class="col-heading">
-                    <img src="img/avatar_2.jpg" alt="avatar">
+                    <img src="img/tommi_avatar.png" alt="avatar">
                     <div class="avatar-text">
                         <h3>Tommaso</h3>
                         <span>Ultimo accesso oggi alle 15:40</span>
@@ -158,13 +152,25 @@
                 <!-- main content -->
                 <div class="message-table">
 
+                    <!-- message template -->
+                    <div id="template">
+                        <div class="message sent">
+                            <p>ok</p>
+                            <span>10.45</span>
+                        </div>
+                    </div>
+
+                    <div class="message received">
+                        <p>ciaone</p>
+                        <span>10.46</span>
+                    </div>
                 </div>
 
                 <!-- message input -->
                 <div class="input-text">
                     <i class="far fa-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio">
-                    <a href="#"><i id="btn" class="fas fa-microphone"></i></a>
+                    <input type="text" placeholder="Scrivi un messaggio" id="message">
+                    <a href="#"><i id="icon" class="fas fa-microphone"></i></a>
                 </div>
             </div>
         </div>
