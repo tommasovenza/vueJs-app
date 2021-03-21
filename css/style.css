@@ -1,8 +1,13 @@
+/* RESET CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: 'Lato', sans-serif;
+}
+/* layout */
 .app-wrapper {
     width: 100%;
     height: 100vh;
@@ -13,54 +18,165 @@
     align-items: center;
 }
 .app-container {
-    background-color: lightgray;
     width: 80%;
     height: 95%;
+}
+.clearfix {
+    display: table;
+    clear: both;
+    content: '';
+}
+/* fine layout */
+/* general settings */
+img {
+    width: 100%;
 }
 /* app left */
 .main-left {
     /* width: 35%; */
     width: 350px;
     height: 100%;
-    background-color: lightpink;
     float: left;
 }
+/* for header left and right */
+.col-heading {
+    height: 70px;
+    width: 100%; 
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.col-heading img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.col-heading li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 0 7px;
+}
+.col-heading a {
+    color: #b1b1b1;
+}
+.col-heading h3 {
+    font-size: 15px;
+}
+.col-heading span {
+    font-size: 13px;
+    color: #bcbfc1;
+}
+.avatar-text {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+/* end headers settings */
+
 .notifications {
     height: 80px;
-    background-color: darkcyan;
+    background-color: #8edafc;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2b424c;
+}
+.notifications i {
+    font-size: 20px;
+    text-align: center;
+    color: #8edafc;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding-top: 10px;
+    margin-right: 10px;
+}
+.notifications-text a {
+    font-size: 13px;
+    color: #4f7485;
 }
 .search {
     height: 50px;
-    background-color: darkred;
+    background-color: #fff;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search i {
+    /* margin-right: 10px; */
+    font-size: 20px;
+    display: inline-block;
+    color: #bcbfc1;
+}
+.search input {
+    margin-left: 20px; 
+    border: 0;
+    height: 50%;
+    width: 220px;
+}
+input[type="text"]::-webkit-input-placeholder {
+    font-size: 14px;
 }
 .contacts-list {
     width: 100%;
     height: calc(100% - 200px);
-    background-color: yellow;
+    background-color: #eaeaea;
     overflow-y: scroll;
+}
+.contacts-item {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-size: 13px;
+}
+.contacts-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.contacts-item span {
+    color: #bcbfc1;
+}
+.contacts-text {
+    flex-grow: 1;
+    padding-left: 10px;
 }
 /* app right */
 .main-right {
     /* width: 65%; */
     width: calc(100% - 350px);
     height: 100%;
-    background-color: orange;
     float: left;
 }
-.col-heading {
-    height: 70px;
-    width: 100%; 
-    background-color: gray;
-}
+/* messages area */
 .message-table {
-    background-color: orangered;
+    background-image: url('../img/wallpaper.jpg');
     width: 100%;
     height: calc(100% - 140px);
 }
 .input-text {
     height: 70px;
     width: 100%; 
-    background-color: darkorange;
+    background-color: #f3eeea;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+.input-text i {
+    color: #757575;
+    margin: 0 20px;
+}
+.input-text input {
+    height: 35px;
+    flex-grow: 1;
+    border: 0;
+    border-radius: 30px;
+    padding-left: 20px;
 }

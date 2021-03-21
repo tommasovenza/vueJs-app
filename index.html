@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google font's lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- custom CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Boolzapp Vue?</title>
 </head>
 <body>
@@ -16,30 +23,137 @@
             <!-- app col left -->
             <div class="main-left">
                 <div class="col-heading">
-
+                    <img src="img/avatar_1.jpg" alt="avatar">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-redo-alt"></i></a></li>
+                        <li><a href="#"><i class="fas fa-comment-alt"></i></a></li>
+                        <li><a href="#"><i class="fas fa-ellipsis-v"></i></a></li>
+                    </ul>
                 </div> 
                 <div class="notifications">
-
+                    <i class="fas fa-bell-slash"></i>
+                    <div class="notifications-text">
+                        <p>Ricevi notifiche di nuovi messaggi</p>
+                        <a href="#">Attiva notifiche desktop</a> 
+                    </div>     
                 </div>
                 <div class="search">
-
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
                 <div class="contacts-list">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur aliquam iste molestiae porro totam culpa autem iure. Natus nobis ducimus animi consequuntur, distinctio similique, totam nesciunt ex quam voluptates molestias.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur aliquam iste molestiae porro totam culpa autem iure. Natus nobis ducimus animi consequuntur, distinctio similique, totam nesciunt ex quam voluptates molestias.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur aliquam iste molestiae porro totam culpa autem iure. Natus nobis ducimus animi consequuntur, distinctio similique, totam nesciunt ex quam voluptates molestias.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur aliquam iste molestiae porro totam culpa autem iure. Natus nobis ducimus animi consequuntur, distinctio similique, totam nesciunt ex quam voluptates molestias.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur aliquam iste molestiae porro totam culpa autem iure. Natus nobis ducimus animi consequuntur, distinctio similique, totam nesciunt ex quam voluptates molestias.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur aliquam iste molestiae porro totam culpa autem iure. Natus nobis ducimus animi consequuntur, distinctio similique, totam nesciunt ex quam voluptates molestias.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur aliquam iste molestiae porro totam culpa autem iure. Natus nobis ducimus animi consequuntur, distinctio similique, totam nesciunt ex quam voluptates molestias.
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur aliquam iste molestiae porro totam culpa autem iure. Natus nobis ducimus animi consequuntur, distinctio similique, totam nesciunt ex quam voluptates molestias.
+                    <div class="contacts-item">
+                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <div class="contacts-text">
+                            <h3>Michele</h3>    
+                            <span>Non poteva essere altrimenti</span>
+                        </div>
+                        <span>17.53</span>
+                    </div>
+                    
+                    <div class="contacts-item">
+                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <div class="contacts-text">
+                            <h3>Michele</h3>    
+                            <span>Non poteva essere altrimenti</span>
+                        </div>
+                        <span>17.53</span>
+                    </div>
+                    <div class="contacts-item">
+                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <div class="contacts-text">
+                            <h3>Michele</h3>    
+                            <span>Non poteva essere altrimenti</span>
+                        </div>
+                        <span>17.53</span>
+                    </div>
+                    <div class="contacts-item">
+                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <div class="contacts-text">
+                            <h3>Michele</h3>    
+                            <span>Non poteva essere altrimenti</span>
+                        </div>
+                        <span>17.53</span>
+                    </div>
+
+                    <div class="contacts-item">
+                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <div class="contacts-text">
+                            <h3>Michele</h3>    
+                            <span>Non poteva essere altrimenti</span>
+                        </div>
+                        <span>17.53</span>
+                    </div>
+                    
+                    <div class="contacts-item">
+                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <div class="contacts-text">
+                            <h3>Michele</h3>    
+                            <span>Non poteva essere altrimenti</span>
+                        </div>
+                        <span>17.53</span>
+                    </div>
+
+                    <div class="contacts-item">
+                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <div class="contacts-text">
+                            <h3>Michele</h3>    
+                            <span>Non poteva essere altrimenti</span>
+                        </div>
+                        <span>17.53</span>
+                    </div>
+
+                    <div class="contacts-item">
+                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <div class="contacts-text">
+                            <h3>Michele</h3>    
+                            <span>Non poteva essere altrimenti</span>
+                        </div>
+                        <span>17.53</span>
+                    </div>
+
+                    <div class="contacts-item">
+                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <div class="contacts-text">
+                            <h3>Michele</h3>    
+                            <span>Non poteva essere altrimenti</span>
+                        </div>
+                        <span>17.53</span>
+                    </div>
+
+                    <div class="contacts-item">
+                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <div class="contacts-text">
+                            <h3>Michele</h3>    
+                            <span>Non poteva essere altrimenti</span>
+                        </div>
+                        <span>17.53</span>
+                    </div>
+
+                    <div class="contacts-item">
+                        <img src="img/avatar_3.jpg" alt="profile picture">
+                        <div class="contacts-text">
+                            <h3>Michele</h3>    
+                            <span>Non poteva essere altrimenti</span>
+                        </div>
+                        <span>17.53</span>
+                    </div>
                 </div>
             </div>
             <!-- app col right -->
             <div class="main-right">
                 <div class="col-heading">
-
+                    <img src="img/avatar_2.jpg" alt="avatar">
+                    <div class="avatar-text">
+                        <h3>Tommaso</h3>
+                        <span>Ultimo accesso oggi alle 15:40</span>
+                    </div>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-search"></i></a></li>
+                        <li><a href="#"><i class="fas fa-paperclip"></i></a></li>
+                        <li><a href="#"><i class="fas fa-ellipsis-v"></i></a></li>
+                    </ul>
                 </div>
                 <!-- main content -->
                 <div class="message-table">
@@ -48,7 +162,9 @@
 
                 <!-- message input -->
                 <div class="input-text">
-
+                    <i class="far fa-smile"></i>
+                    <input type="text" placeholder="Scrivi un messaggio">
+                    <a href="#"><i id="btn" class="fas fa-microphone"></i></a>
                 </div>
             </div>
         </div>
