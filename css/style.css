@@ -214,3 +214,9 @@ input[type="text"]::-webkit-input-placeholder {
 .active {
     display: flex!important;
 }
+#template {
+    display: none;
+}
+#template-received {
+    display: none;
+}
