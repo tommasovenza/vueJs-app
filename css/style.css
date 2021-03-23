@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+ul li {
+    list-style-type: none;
+}
 body {
     font-family: 'Lato', sans-serif;
 }
@@ -219,4 +222,26 @@ input[type="text"]::-webkit-input-placeholder {
 }
 #template-received {
     display: none;
+}
+.with-drop {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    flex-direction: column;
+    position: absolute;
+    padding: 8px;
+    font-size: 13px;
+    width: 90px;
+    right: 30%;
+    top: 80%;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    z-index: 1;
+}
+.with-drop li {
+    color: #b1b1b1;
+    text-decoration: none;
+}
+.with-drop li:hover {
+    color: #000;
 }
