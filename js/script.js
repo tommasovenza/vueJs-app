@@ -2,15 +2,16 @@ $(document).ready(function( ) {
     
     // event click on bottom icon
     $(document).on('click', '#icon', function() {
-        // call sendMessage function
-        sendMessage();
-        // set an answer message reply after a send message
-        setTimeout(answerMessage, 1000);
+        // call a message @click
+        sendMessage();    
     });
 
     $(document).on('click', '.fa-chevron-down.active', function() {
         // show dropdown
         $(this).siblings('.with-drop').toggleClass('active');
+
+        // solutions with .not( )
+        // $('.fa-chevron-down').not(this).parent('.message').find('.with-drop').removeClass('active');
 
         // hide other dropdown at every click on chevron in the app
         $(this).parent().siblings('.message').find('.with-drop').removeClass('active');
@@ -55,28 +56,30 @@ $(document).ready(function( ) {
 
 // function input message
 // ->input message: string
-function sendMessage(inputMessage) {
-    // take input value
+function sendMessage() {
     var inputMessage = $('#message').val();
-    console.log(inputMessage);
     // call function in there's a value inside the input text
     if(inputMessage != '') {
-        var clone = $('#template').children().clone();
-        console.log(clone);
-    
+        let clone = $('#template').children().clone();
+        // add class sent to set a background color and add shape to text
+        clone.addClass('sent');
+        // creating a new object date
         var dateTime = new Date();
         var hour = dateTime.getHours();
         var minutes = dateTime.getMinutes();
         var currentTime = addZeroToHour(hour) + ':' + addZeroToHour(minutes);
-    
+        // appending message to board
         $('.message-table').append(clone);
-        $('.message').addClass('sent');
+        // appending time to message
         $('.message-table span').text(currentTime);
+        // do not overriding other message's text
         $('.message-table p').last().text(inputMessage);
-    
+        // cleaning input field
         $('#message').val('');
-    }
-    
+
+        // set an answer message reply after a send message
+        setTimeout(answerMessage, 1000);
+    } 
 }
 // bugfixing javascripts hours
 function addZeroToHour(number) {
@@ -89,17 +92,16 @@ function addZeroToHour(number) {
 // answerMessage is identical to sendMessage apart for the class 
 // that is add to message template
 function answerMessage() {
-    var clone = $('#template-received').children().clone();
+    var clone = $('#template').children().clone();
+    clone.addClass('received');
+    // creating a new object date
     var dateTime = new Date();
     var hour = dateTime.getHours();
     var minutes = dateTime.getMinutes();
-    console.log(minutes);
+    // fixing date
     var currentTime = addZeroToHour(hour) + ':' + addZeroToHour(minutes);
-    console.log(currentTime);
     $('.message-table').append(clone);
-    $('#template-received .message').addClass('received');
     $('.message-table span').text(currentTime);
-    $('.message-table p').last().text(inputMessage);
     // svuoto il campo ricerca
     $('#message').val('');
 }
