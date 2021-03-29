@@ -30,8 +30,6 @@ $(document).ready(function( ) {
         if((inputMessage != '') && (event.which == '13')) {
             // writing a message
             sendMessage(inputMessage);
-            // set and answer message after 1 second
-            setTimeout(answerMessage, 1000);
         } 
     });
     // keyboard input events for researching contacts
@@ -69,16 +67,17 @@ function sendMessage() {
         var minutes = dateTime.getMinutes();
         var currentTime = addZeroToHour(hour) + ':' + addZeroToHour(minutes);
         // appending message to board
-        $('.message-table').append(clone);
+        $('.chat-container.visible').append(clone);
         // appending time to message
-        $('.message-table span').text(currentTime);
+        $('.chat-container.visible span').text(currentTime);
         // do not overriding other message's text
-        $('.message-table p').last().text(inputMessage);
+        $('.chat-container.visible p').last().text(inputMessage);
         // cleaning input field
         $('#message').val('');
 
         // set an answer message reply after a send message
-        setTimeout(answerMessage, 1000);
+        setTimeout(answerMessage, 2000);
+        pretendendToBeRealPersonWhoWrite();
     } 
 }
 // bugfixing javascripts hours
@@ -92,6 +91,7 @@ function addZeroToHour(number) {
 // answerMessage is identical to sendMessage apart for the class 
 // that is add to message template
 function answerMessage() {
+    
     var clone = $('#template').children().clone();
     clone.addClass('received');
     // creating a new object date
@@ -100,10 +100,12 @@ function answerMessage() {
     var minutes = dateTime.getMinutes();
     // fixing date
     var currentTime = addZeroToHour(hour) + ':' + addZeroToHour(minutes);
-    $('.message-table').append(clone);
-    $('.message-table span').text(currentTime);
+    $('.chat-container.visible').append(clone);
+    $('.chat-container.visible span').text(currentTime);
     // svuoto il campo ricerca
     $('#message').val('');
+    // writing last access on people's heading
+    $('.main-right .current-contact-heading').find('span').text('ultimo accesso oggi alle ' + currentTime);
 }
 
 // questa funzione ricerca i contatti a cui inviare un messaggio
@@ -130,5 +132,26 @@ function searchContacts() {
             $(this).hide();
         }
     });
+}
 
+$('.contacts-item').click(function() {
+    $('.contacts-item').removeClass('selected');
+    $(this).addClass('selected');
+    let contactNumber = $(this).attr('data-current-contact');
+    let contactPhotos = $(this).find('img').attr('src');
+    let contactName = $(this).find('h3').text();
+    console.log(contactPhotos);
+    console.log(contactName);
+    // show just one window, so first remove class visible to all window
+    $('.chat-container').removeClass('visible');
+    // and then show only the window that has same values of the contact
+    $('.chat-container[data-current-chat="' + contactNumber + '"]').addClass('visible');
+    // every times I click on a contact I'm going to override photos and text to show 
+    // the current contact
+    $('.main-right .current-contact-heading').find('img').attr('src', contactPhotos);
+    $('.main-right .current-contact-heading').find('h3').text(contactName);
+});
+
+function pretendendToBeRealPersonWhoWrite() {
+    $('.main-right .current-contact-heading').find('span').text('sta scrivendo...');
 }
